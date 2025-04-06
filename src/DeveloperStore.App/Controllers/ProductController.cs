@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
 
 namespace DeveloperStore.App.Controllers;
 
@@ -27,7 +28,7 @@ public class ProductController(UserManager<ApplicationUser> userManager,
     public async Task<IActionResult> Index()
     {
         var user = _userManager.GetUserId(User);
-
+       
         var products = _mapper.Map<IEnumerable<ProductViewModel>>(await _productService.GetAllWithCategoryBySellerAsync(Guid.Parse(user)));
 
         foreach (var prodct in products)

@@ -39,7 +39,7 @@ public class ImageService : IImageService
             await file.CopyToAsync(stream);
         }
 
-        return filePath; // Retorna o caminho físico da imagem salva
+        return filePath; 
     }
 
     public async Task<string> SaveImageAsync(string file, string fileName)
@@ -58,7 +58,7 @@ public class ImageService : IImageService
             await formFile.CopyToAsync(stream);
         }
 
-        return completeFileName; // Retorna o caminho físico da imagem salva
+        return completeFileName; 
     }
 
     public async Task<string> UpdateImageAsync(string file, string fileName, string oldFileName)
