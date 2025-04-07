@@ -85,7 +85,7 @@ A estrutura do projeto é organizada da seguinte forma:
 4. **Executar a API:**
    - `cd src/DeveloperStore.Api/`
    - `dotnet run`
-   - Acesse a documentação da API em: https://localhost:7015/swagger
+   - Acesse a documentação da API em: https://localhost:7015
 
 ## **7. Instruções de Configuração**
 
@@ -96,7 +96,7 @@ A estrutura do projeto é organizada da seguinte forma:
 
 A documentação da API está disponível através do Swagger. Após iniciar a API, acesse a documentação em:
 
-http://localhost:5001/swagger
+ https://localhost:7015/swagger/index.html
 
 ## **9. Avaliação**
 
