@@ -39,6 +39,7 @@ public class AccountController(ISellerService sellerService,
         return View(model);
     }
 
+
     public IActionResult Register()
     {
         return View();
@@ -92,7 +93,6 @@ public class AccountController(ISellerService sellerService,
         }
         return View(model);
    }
-
 
     public async Task<IActionResult> Logout()
     {

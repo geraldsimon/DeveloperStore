@@ -42,7 +42,7 @@ public static class DbMigrationHelpers
         if (await context.Sellers.AnyAsync())
             return;
 
-        var _email = "simonfishinc@gmail.com";
+        var _email = "joaomelo@gmail.com";
         var _password = "Teste@123";
 
 
@@ -51,7 +51,7 @@ public static class DbMigrationHelpers
         await context.Sellers.AddAsync(new Seller()
         {
             Id = idUser,
-            Name = "Joao Leitao",
+            Name = "Joao Melo",
             CreatedAt = DateTime.UtcNow,
         });
 
@@ -68,6 +68,14 @@ public static class DbMigrationHelpers
 
         Guid guidCategory = await context.Categories.Where(c => c.Name == "LapTop").Select(c => c.Id).FirstOrDefaultAsync();
 
+        await CreateProducts(context, idUser, guidCategory);
+        await CreateProducts(context, idUser, guidCategory);
+        await CreateProducts(context, idUser, guidCategory);
+        await CreateProducts(context, idUser, guidCategory);
+    }
+
+    private static async Task CreateProducts(AppDbContext context, Guid idUser, Guid guidCategory)
+    {
         await context.Products.AddAsync(new Product()
         {
             Id = Guid.NewGuid(),
@@ -117,7 +125,7 @@ public static class DbMigrationHelpers
             Content = "This is a sample post content.",
             SellerId = idUser,
             CreatedAt = DateTime.UtcNow,
-            Comments= new List<Comment>()
+            Comments = new List<Comment>()
             {
                 new Comment()
                 {

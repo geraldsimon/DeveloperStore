@@ -15,12 +15,12 @@ public class HomeController(IProductService productService, IMapper mapper) : Co
     {
         return View(_mapper.Map<IEnumerable<ProductViewModel>>(await _productService.GetAllWithCategoryAsync()));
     }
-
+     
     public IActionResult Privacy()
     {
         return View();
     }
-
+ 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

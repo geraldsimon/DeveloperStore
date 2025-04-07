@@ -4,10 +4,10 @@
 
 Bem-vindo ao repositório do projeto **DeveloperStore**. Este projeto é uma entrega do MBA DevXpert Full Stack .NET e é referente ao módulo **Introdução ao Desenvolvimento ASP.NET Core**.
 O objetivo principal desenvolver uma aplicação de Gestão de Mini Loja Virtual com Cadastro de Produtos e Categorias
-que permite aos usuários criar, editar, visualizar e excluir Produtos e categorias, tanto através de uma interface web utilizando MVC quanto através de uma API RESTful.
+que permite aos usuários criar, editar, visualizar e excluir Produtos e categorias, tanto através de uma interface Web utilizando MVC quanto através de uma API RESTful.
 
 A Aplicação MVC e API RESTful compartilha da camada de business, camada de dados e consequenemente a base de dados.
-Na camada business tem uma classe de servico chamada ImageService que gerencia as operações CRUD das imagens no banco de dados e fisicamente na pasta "wwwroot//image/"
+
 
 ### **Autor(es)**
 - **Geraldo Alves Simao Junior**
@@ -41,12 +41,11 @@ O projeto consiste em:
 
 A estrutura do projeto é organizada da seguinte forma:
 
-
 - src/
   - DeveloperStore.App/ - Projeto MVC
   - DeveloperStore.Api/ - API RESTful
-  - DeveloperStore.Data/ - Modelos de Dados e Configuração do EF Core
   - DeveloperStore.Business/ - Regras de negócio 
+  - DeveloperStore.Data/ - Modelos de Dados e Configuração do EF Core
 - README.md - Arquivo de Documentação do Projeto
 - FEEDBACK.md - Arquivo para Consolidação dos Feedbacks
 - .gitignore - Arquivo de Ignoração do Git

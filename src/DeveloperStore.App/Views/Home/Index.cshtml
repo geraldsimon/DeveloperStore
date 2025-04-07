@@ -4,7 +4,6 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-
 <div class="container mt-4">
     <h2 class="mb-4">Product List</h2>
     <div class="row">
@@ -16,8 +15,8 @@
 
                     <div class="card-body">
                         <h5 class="card-title">@product.Name</h5>
-                        <p class="card-text"> @product.Description</p>
-                        <p class="card-text">Category: @product.Category.Name</p>
+                        <p class="card-text"> @product.Description.Length > 50 ?? @product.Description.Substring(0,50) + "..."</p>
+                        <p class="card-text"><b>Category:</b> @product.Category.Name</p>
                         <h6 class="text-primary">$@product.Price.ToString("F2")</h6>
                         @* <a href="#" class="btn btn-success">Buy Now</a> *@
                     </div>
