@@ -101,8 +101,8 @@ A documentação da API está disponível através do Swagger. Após iniciar a API, ac
  ## **9. Testes**
 
   - ** O projeto apresenta geração automática de dados quando a aplicação Web ASP.NET MVC é iniciada, com o Data Seed.
-        Usuario = "joaomelo@gmail.com";
-        Senha = "Teste@123";
+- Usuario = joaomelo@gmail.com
+- Senha = Teste@123
 
   - ** Para testes na aplicação API o prjeto conta com arquivos de configuração do Postman, que podem ser importados para facilitar os testes.
 - O arquivo `DeveloperStore.postman_collection.json` contém a coleção de requisições para a API.
