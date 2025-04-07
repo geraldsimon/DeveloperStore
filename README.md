@@ -97,8 +97,17 @@ A estrutura do projeto é organizada da seguinte forma:
 A documentação da API está disponível através do Swagger. Após iniciar a API, acesse a documentação em:
 
  https://localhost:7015/swagger/index.html
+ 
+ ## **9. Testes**
+  - ** O projeto apresenta geração automática de dados quando a aplicação Web ASP.NET MVC é iniciada, com o Data Seed.
+        Usuario = "joaomelo@gmail.com";
+        Senha = "Teste@123";
 
-## **9. Avaliação**
+  - ** Para testes na aplicação API o prjeto conta com arquivos de configuração do Postman, que podem ser importados para facilitar os testes.
+        - O arquivo `DeveloperStore.postman_collection.json` contém a coleção de requisições para a API.
+        - O arquivo `DeveloperStore.postman_environment.json` contém o ambiente de configuração para o Postman. 
+
+## **10. Avaliação**
 
 - Este projeto é parte de um curso acadêmico e não aceita contribuições externas. 
 - Para feedbacks ou dúvidas utilize o recurso de Issues
