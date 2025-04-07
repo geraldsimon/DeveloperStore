@@ -1,5 +1,6 @@
 ﻿using DeveloperStore.Business.Models;
 using DeveloperStore.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -46,7 +47,7 @@ public static class DbMigrationHelpers
         var _password = "Teste@123";
 
 
-        var idUser = await UserIdentityMigrationHelper.CreateUserAsync(serviceProvider.CreateScope().ServiceProvider, _email, _password);
+        var idUser = await CreateUserAsync(serviceProvider.CreateScope().ServiceProvider, _email, _password);
 
         await context.Sellers.AddAsync(new Seller()
         {
@@ -171,5 +172,21 @@ public static class DbMigrationHelpers
         });
 
         await context.SaveChangesAsync();
+    }
+
+    private static async Task<Guid> CreateUserAsync(IServiceProvider services, string email, string passsword)
+    {
+        var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+
+        var user = new ApplicationUser
+        {
+            UserName = email,
+            Email = email,
+        };
+
+        await userManager.CreateAsync(user, passsword);
+        Guid userId = userManager.Users.FirstOrDefault(x => x.Email == email).Id;
+
+        return userId;
     }
 }
